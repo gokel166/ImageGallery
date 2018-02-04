@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
+using SimImageGallery.Models;
 
 namespace SimImageGallery.Data
 {
@@ -9,5 +10,7 @@ namespace SimImageGallery.Data
         {
 
         }
+
+        public DbSet<GalleryImage> GalleryImages { get; set; }
     }
 }
