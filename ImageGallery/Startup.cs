@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SimImageGallery.Data;
+using SimpleImageGallery.Services;
 
 namespace ImageGallery
 {
@@ -26,6 +26,9 @@ namespace ImageGallery
             services.AddDbContext<SimImageGalleryDbContext>(options =>
                 options.UseSqlServer(Configuration
                 .GetConnectionString("DefaultConnection")));
+
+            services.AddScoped<IImage, ImageService>();
+
             services.AddMvc();
         }
 
