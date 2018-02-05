@@ -8,7 +8,7 @@ using SimImageGallery.Models;
 
 namespace ImageGallery.Controllers
 {
-    public class ImGalleryController : Controller
+    public class GalleryController : Controller
     {
         public IActionResult Index()
         {
@@ -29,7 +29,7 @@ namespace ImageGallery.Controllers
 
             var tag3 = new ImageTag()
             {
-                Description = "New York",
+                Description = "Providence",
                 Id = 2
             };
 

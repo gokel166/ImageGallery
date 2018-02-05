@@ -2,17 +2,23 @@
 
 <div class="container body-content">
     <div class="gallery-content">
-        @foreach(var image in Model.Images)
-        {
-            <div class="gallery-image" style="background-image:url(@image.Url)"></div>
-            <span>image.Title</span>
-            foreach(var tag in image.Tags)
+        <div class="glyphicon-arrow-down gallery-content">
+            @foreach(var image in Model.Images)
             {
-                <li>
-                    tag.Description
-                </li>
+                <div class="gallery-image-container">
+                    <div class="gallery-image" style="background-image:url(@image.Url)"></div>
+                </div>
+                <span>@image.Title</span>
+                <ul>
+                    @foreach (var tag in image.Tags)
+                    {
+                        <li>
+                            tag.Description
+                        </li>
 
+                    }
+                </ul>
             }
-        }
+        </div>
     </div>
 </div>
