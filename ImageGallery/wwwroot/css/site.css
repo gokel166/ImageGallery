@@ -1,4 +1,14 @@
-﻿body {
+﻿.gallery-image {
+    padding: 8px;
+    background: #fff;
+    border-radius: 2px;
+    display: inline-block;
+    height: 300px;
+}
+
+.gallery-content {}
+
+body {
     padding-top: 50px;
     padding-bottom: 20px;
 }
